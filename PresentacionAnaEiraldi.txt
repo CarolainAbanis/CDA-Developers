@@ -1,0 +1,9 @@
+En el siguiente proyecto se propone analizar, diseñar y construir una aplicación software que permita controlar las ventas físicas y virtuales de una empresa de manufactura y hacerles el correspondiente seguimiento.
+Hola mi nombre es Ana Giovanna Eiraldi, tengo 28 años y soy Licenciada en Música. Estoy muy feliz de poder formar parte de MisionTic y espero seguir aprendiendo de este maravilloso mundo de la programación. 
+
+
+Este es el cambio para probar el pull request
+
+
+
+Otro cambio para probar
