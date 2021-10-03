@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./Dinamica_maestro_usuarios.js"></script>
+<link rel="stylesheet" href="./Estilos_maestro_usuarios.css"
+</head>
+<body>
+    <div class="barraNavegacion"> 
+    <Ul>
+    <li id="logoCDA">CDA Developers</li> 
+    <li><a href="home.asp">Inicio</a></li>
+    <li><a href="default.asp">Ventas</a></li>
+    <li><a href="productos.asp">Productos</a></li>
+    <li><a class="active" href="usuarios.asp">Usuarios</a></li>
+    </Ul>
+    </div>
+    <p></p> 
+    <br>   
+    <div class="busquedaUsuario">
+        <form action="/action_page.php">
+            <input type="text" placeholder="Busqueda Usuario" name="usuario"
+        </form>
+        <button type="submit" class="boton">
+            <span class="boton_texto">Ver usuario</span>
+            <span class="boton_iconoBusqueda">
+            <ion-icon name="search"></ion-icon>
+            </span>
+        </button>
+    
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <div>
+    <table>
+    <tr>
+        <th colspan="6">Lista de usuarios</th>
+    </tr>
+    <tr>
+        <th>Editar</th>
+        <th>ID Usuario</th>
+        <th>Nombre</th>
+        <th>Correo electronico</th>
+        <th>Rol usuario</th>
+        <th>Estado</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" id="edit" name="editar>"
+        </td>
+        <td>Usuario1</td>
+        <td>Nombre</td>
+        <td>Correo electronico</td>
+        <td>
+            <select class="rolUsuario">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </td>
+        <td>
+            <select class="estadoUsuario">
+                <option value="pendiente">Pendiente</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="no autorizado">No Autorizado</option>
+            </select>
+        </td>      
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" id="edit" name="editar>"
+        </td>
+        <td>Usuario2</td>
+        <td>Nombre</td>
+        <td>Correo electronico</td>
+        <td>
+            <select class="rolUsuario">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </td>
+        <td>
+            <select class="estadoUsuario">
+                <option value="pendiente">Pendiente</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="no autorizado">No Autorizado</option>
+            </select>
+        </td>    
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" id="edit" name="editar>"
+        </td>
+        <td>Usuario3</td>
+        <td>Nombre</td>
+        <td>Correo electronico</td>
+        <td>
+            <select class="rolUsuario">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </td>
+        <td>
+            <select class="estadoUsuario">
+                <option value="pendiente">Pendiente</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="no autorizado">No Autorizado</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" id="edit" name="editar>"
+        </td>
+        <td>Usuario4</td>
+        <td>Nombre</td>
+        <td>Correo electronico</td>
+        <td>
+            <select class="rolUsuario">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </td>
+        <td>
+            <select class="estadoUsuario">
+                <option value="pendiente">Pendiente</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="no autorizado">No Autorizado</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="radio" id="edit" name="editar>"
+        </td>
+        <td>Usuario5</td>
+        <td>Nombre</td>
+        <td>Correo electronico</td>
+        <td>
+            <select class="rolUsuario">
+                <option value="administrador">Administrador</option>
+                <option value="vendedor">Vendedor</option>
+            </select>
+        </td>
+        <td>
+            <select class="estadoUsuario">
+                <option value="pendiente">Pendiente</option>
+                <option value="autorizado">Autorizado</option>
+                <option value="no autorizado">No Autorizado</option>
+            </select>
+        </td>     
+    </tr>
+    </table>    
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="botonesAbajo">
+        <button type="submit" class="boton">
+            <span class="botonTexto">Actualizar</span>
+         </button>
+        <button onclick="guardarCambio()" type="submit" class="boton">
+            <span class="botonTexto">Guardar</span>
+        </button>
+        <button type="submit" class="boton">
+            <span class="botonTexto">Eliminar</span>
+        </button>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>    
+</body>
+
+
+
+</html>
