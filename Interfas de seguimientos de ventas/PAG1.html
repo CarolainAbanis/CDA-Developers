@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Pagina de ventas</title>
+    <link rel="stylesheet" href="PAG1.css" >
+   
+    </head>
+   
+
+
+    <body>
+         <div class="loading show">
+            <div class="spin"></div>
+        </div>
+        
+        <script>
+    
+        var Loading=(loadingDelayHidden=0)=>{
+        let loading=null;
+        const myLoadingDelayHidden=loadingDelayHidden;
+        let imgs=[];
+        let lenImgs=0;let 
+        counterImgsLoading=0;
+        function incrementCounterImgs()
+        {counterImgsLoading+=1;
+            if(counterImgsLoading===lenImgs)
+            {hideLoading()}}
+            function hideLoading(){
+                if(loading!==null){ 
+                    loading.classList.remove('show');
+                    setTimeout(function(){
+                        loading.remove()},
+                        myLoadingDelayHidden)}}
+                        function init(){
+                            document.addEventListener('DOMContentLoaded',function(){
+                                loading=document.querySelector('.loading');
+                                imgs=Array.from(document.images);lenImgs=imgs.length;if(imgs.length===0){
+                                    hideLoading()}
+                                    else{imgs.forEach(function(img){
+                                        img.addEventListener('load',incrementCounterImgs,false)})}})}return{'init':init}}
+        
+        Loading(1000).init();
+        </script>
+      
+            
+            
+            <nav class="nav">
+            
+                <ul class="nav__menu" style>
+                    <li class="nav__menu-item"><a>CDA-Developers</a></li>
+                    <li class="nav__menu-item"><a>Ventas</a>
+                      <ul class="nav__submenu">
+                        <li class="nav__submenu-item"> <a>Ingresar ventas</a></li>
+                        <li class="nav__submenu-item"> <a>Actualizar Ventas</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav__menu-item"><a>Productos</a>
+                      <ul class="nav__submenu">
+
+                      </ul>
+                    </li>
+                    <li class="nav__menu-item"><a>Usuarios</a></li>
+                  </ul>
+            </nav>
+
+            
+        
+    
+        <style>
+            div#capa1{
+                width:80px;
+                border:0px solid rgb(255, 255, 255);
+            }
+            #capa1{
+               position:relative;
+                left:80px;
+                top:40px;
+                background-color: rgb(255, 255, 255);
+                font-weight: bold;
+                margin: left;
+            }
+        </style>
+        
+        
+        
+        <div id= "capa1">
+            Buscar Productos:   
+        </div>
+
+       
+            
+            
+            <div class="dropdown">
+              
+              <button class="dropbtn">ID ventas</button>
+              
+              
+              <div class="dropdown-content">
+                <a href="#">C.C .Cliente</a>
+                <a href="#">Nombre del Cliente</a>
+                <a href="#">Todas las ventas</a>
+            
+              </div>
+              
+            </div>
+            
+            
+        
+            <div class="BUSCAR">
+                <input type="text">
+            </div>
+         <div class= "Boton">
+            <button>BUSCAR</button>
+         </div>
+         <div id="Actualizar"class="Actualizar">
+            <input type=button value="Actualizar venta" onClick="mi_alerta()">
+            
+        </div>
+        
+        <script >
+            function mi_alerta () {
+            alert ("Su venta ha sido actualizada con exito");
+            }
+            </script>
+          
+         
+        </style>
+        
+        
+        <br>
+        <br>
+        <br>
+        <div>
+        <table>
+        
+        <tr>
+            <th>Id Venta</th>
+            <th>CC cliente</th>
+            <th>Nombre</th>
+            <th>vendedor</th>
+            <th>productos</th>
+            <th>cantidad</th>
+            <th>Valor unitario</th>
+            <th>valor total</th>
+            <th>Fecha de venta</th>
+            <th>estado de venta</th>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            
+            <td>Usuario1</td>
+            <td>Nombre</td>
+            <td></td>
+            <td>
+                
+            </td>
+            <td><td>
+            </td><td>
+            </td><td>
+            </td>
+            <td><select class="estadoventa">
+                <option value="En proceso">En proceso</option>
+                <option value="Cancelada">Cancelada</option>
+                <option value="Entregada">Entregada</option>
+            </select>
+            </td>
+               
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>Usuario2</td>
+            <td>Nombre</td>
+            <td></td>
+            <td>
+                
+            </td>
+            <td><td>
+            </td><td>
+            </td><td>
+            </td><td>
+            </td>
+               
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+            <td>Usuario3</td>
+            <td>Nombre</td>
+            <td></td>
+            <td>
+                
+            </td>
+            <td><td>
+            </td><td>
+            </td><td>
+            </td><td>
+            </td>
+               
+        </tr>
+        <tr>
+
+            <td>
+                
+            </td>
+            <td>Usuario4</td>
+            <td>Nombre</td>
+            <td></td>
+            <td>
+               
+            <td>
+                
+            </td>
+            <td>
+            </td><td>
+            </td><td>
+            </td><td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               
+            </td>
+            <td>Usuario5</td>
+            <td>Nombre</td>
+            <td></td>
+            <td>
+                
+            </td>
+            <td>
+            </td>
+            <td>
+             </td>     
+             <td>
+            </td><td>
+            </td><td>
+            </td>
+        </tr>
+        </table>    
+        </div>
+        <br>
+        <br>
+        <br>
+           
+</body>
+</html>

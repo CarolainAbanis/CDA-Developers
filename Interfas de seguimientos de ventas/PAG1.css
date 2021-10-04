@@ -1,0 +1,197 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(magicos-paisajes-fotograficos-andrew-soundarajan_01.jpg);
+  background-size: cover;
+}
+
+
+body {
+  margin: 10px;
+  margin-left: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+ 
+  
+  
+}
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+
+
+
+.nav {
+  width: 500px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #000000;
+  
+}
+.nav a {
+  display: block;
+  padding: 0 16px;
+  line-height: inherit;
+  cursor: pointer;
+}
+.nav__menu {
+  line-height: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nav__menu-item {
+  display: inline-block;
+  position: relative;
+}
+.nav__menu-item:hover {
+  background-color: #ffffff;
+}
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+}
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 220px;
+  background-color: #ffffff;
+}
+.nav__submenu-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(17, 134, 243);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 1s all;
+    opacity: 0;
+}
+.loading.show {
+    opacity: 1;
+}
+.loading .spin {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #3cefff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}            
+
+         
+   
+
+.dropbtn {
+    background-color: #fdfdfd;
+    color: rgb(0, 0, 0);
+    padding: 0.5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left:80px;
+    top:41.5px;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #707070;
+}
+
+
+.BUSCAR {
+  display: inline-block;
+  position: relative;
+    left:80px;
+    top:40px;
+    margin:auto;
+}
+
+.Boton{
+  display:inline;
+  position: relative;
+    left:80px;
+    top:40px;
+    
+}
+.Actualizar{
+  display: inline-block;
+  position: relative;
+    left:80px;
+    top:40px;
+    margin: auto;
+}
+
+table, th, td{
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  padding: 4px;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-collapse: collapse;
+  background-color: ivory;
+}
