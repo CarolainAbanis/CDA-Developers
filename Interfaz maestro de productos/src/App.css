@@ -111,11 +111,10 @@
         box-sizing: border-box;
       }
       
-    
-  
      
   }
   table {
+    
     border-collapse: collapse;
     border-spacing: 0;
     width: 90%;
@@ -137,7 +136,7 @@ tr:nth-child(even) {
     border-color:grey; ;
     color: black;
     margin-top:5%;
-    margin-left: 12%;
+    margin-left: 15%;
     margin-right: 10%;
     margin-bottom: 10%;
     padding: 10px 25px;
@@ -147,19 +146,113 @@ tr:nth-child(even) {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     cursor: pointer;
-    border-radius:20px ;
+    border-radius:10px ;
 
   }
-  
+.button1:hover {
+    background-color: cadetblue;
+}
+
+
 .search-btn{
+    font-size: 80px;
   font-family: Arial, Helvetica, sans-serif;
+}
   
 
-}  
 .buscar{
-  margin-left: 8%;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: pointer;
-  border-radius:20px;
+    border-color:grey; ;
+    color: black;
+    font-size:80px;
+    margin-left: 0;
+    margin-bottom: 5%;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius:10px ;
 }
+.btn-buscar{
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius:10px ;
+
+}
+.btn-buscar:hover{
+    background-color:cadetblue;
+}
+.labelBuscar{
+    font-size:20px;
+   
+}
+.Buscarpor{
+    font-size:20px;
+}
+.busqueda{
+  margin-left: 1%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 30%;
+  height: 10%;
+  font-size: 12px;
+
+}
+
+.form-control {
+  display: inline block;
+  width: 50%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.caja {
+    
+    margin:20px auto 40px auto;	
+    border:1px solid #d9d9d9;
+    height:30px;
+    overflow: hidden;
+    width: 250px;
+    position:relative;
+ }
+ select {
+    
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px; 
+ } 
+ select:focus{ outline: none;}
+ 
+ .caja::after{
+    
+     content:"\025be";
+     display:table-cell;
+     padding-top:7px;
+     text-align:center;
+     width:30px;
+     height:30px;
+     background-color:#d9d9d9;
+     position:absolute;
+     top:0;
+     right:0px;	
+     pointer-events: none;
+ }
