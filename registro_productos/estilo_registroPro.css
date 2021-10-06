@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+    background: white;
+    background-size: cover; /* pone fonde y define el tamaño*/
+    background-attachment: fixed; /*hace que el fondo se quede pegado a la pantalla*/
+
+}
+h1{
+    font-size: 2rem;
+    line-height: 1.3em; 
+    margin-top: 10%;
+    text-align: center;  
+}
+.contenedor{
+    width: 85%; 
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.cabecera{
+    background: #333;
+    color: white;
+    padding: 2rem 0; /*relleno arriba y abajo y a los lados*/
+    /*posiciona el menu en un solo lugar*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.cabecera a{
+    color: white; 
+    text-decoration: none; /*el enlace no tenga decoracion */
+}
+.logo-nav-contenedor{
+    display: flex;
+    justify-content: space-between; /*hace que el contenido de expanda*/
+    align-items: center; /*centra los elemntos*/
+    flex-wrap: wrap;/*si esta al lado de elemento mas grande, pase abajo y no fuerce estar al lado*/
+
+}
+.logo{
+    letter-spacing: 20px;/*espacion entre letras */
+    font-size: 1.3em;
+}
+.menu-icon{
+    display: none;
+}
+.navegacion ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navegacion ul li{
+    display: inline-block;/*uno al lado del otro*/
+}
+.navegacion ul li a{
+    display: block; 
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear; /*efecto de transicion cuando pasa el cursor*/
+    border-radius: 5px;
+}
+.navegacion ul li a:hover{
+    background: cadetblue;
+}
+.main{
+    padding: 1%;
+    background:white;
+
+
+}
+
+.footer{
+    background: gainsboro;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+/*solo aplican cuando la pantalla tenga un ancho maximo de..*/
+@media only screen and (max-width: 767px){
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+   
+    .navegacion{
+        width: 100%;
+        margin: 1rem;
+    
+    }/*oculta el menu y lo muestra como un boton*/
+    .navegacion ul {
+        display: none;
+    }
+    .navegacion ul.show{
+        display: block;
+    }
+
+    .navegacion ul li{
+        display: block;/*uno al lado del otro*/
+    }
+    .navegacion ul li a{
+        display: block; 
+        padding: 0.5rem;
+        transition: all 0.4s linear; /*efecto de transicion cuando pasa el cursor*/
+        border-radius: 5px;
+    }
+    .navegacion ul li a:hover{
+        background: cadetblue;
+    }
+}
+.tabla table{
+    margin: 10px auto;
+    background: white;
+
+}
+td,th{
+    text-align: justify;
+    padding: 8px;
+    border: 1px solid #333;
+}
+.contenedorDatos{ /*ponemos los tamaños de la clase contenedor*/
+    width: 100%;
+    padding: 15px;
+    
+}
+/*
+.formulario{ /* definimos el estilo de la clase formulario
+    background: white;
+    margin-top: 150px;
+    padding: 3px;
+}
+.input-contenedor{
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    
+}*/
+.formulario {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: table;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.formulario input {
+    width: 60%;
+    height: 15px;
+    margin: 0.5rem;
+  }
+  .combobox{
+    width: 60%;
+    height: 20px;
+    margin: 0.5rem;  
+  }
+  
+  
+  .button{
+    border: none;
+    width: 50%;
+    color: white;
+    font-size: 25px;
+    background: #333;
+    padding: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20% ;
+}
+.button:hover{ /*cambia de color cuando pasa el cursor */
+    background: cadetblue;
+
+}

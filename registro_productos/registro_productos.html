@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_registroPro.css"> <!--llamo el archivo de estilos -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--uso la libreria jquery -->
+    <script src="scrip_menu.js"></script>
+   <!--  <script src="script_registroPro.js"></script>
+   <link rel="stylesheet" href="estilos.css"> -->
+    <title>Regristrar Productos</title>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="contenedor logo-nav-contenedor">
+            <a href="#" class="logo">LOGO</a>
+            <span class="menu-icon">Ver Menú</span>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Ventas</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Usuarios</a></li>
+                    <li><a href="inicio_sesion_cda.html">Registrarse/Ingresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   <main class="main">
+        <div class="contenedorDatos">
+            <h1>Modulo de registro de productos</h1>
+        </div>
+
+    </main>
+   
+    <div>
+    <form id="formularioDatos"  class="formulario">
+        <div class="contenedorDatos">
+            
+            <div class="input-contendedor">
+        <label for="idProducto"> ID producto</label>
+        <input name="idProducto" id="idProducto"type="text">
+         </div>
+
+         <div class="input-contendedor">
+        <label for="descripcionProducto">Descripcion</label>
+        <input name="descripcionProducto" id="descripcionProducto"type="text">
+         </div>
+
+         <div class="input-contendedor">
+        <label for="valorProducto">Valor Unitario</label>
+        <input name="valorProducto" id="valorProducto"type="number">
+         </div>
+
+         <div class="input-contendedor">
+        <label for="estadoProducto">Estado del producto</label>
+        <select name="estadoProducto" id="estadoProducto" class="combobox">
+            <option  value="Disponible">Disponible</option>
+            <option value="No disponible">No disponible</option>
+        </select>
+         </div>
+
+         <div class="input-contendedor">
+        <label for="fechaRegistro">Fecha de registro</label>
+        <input type="date" name="fechaRegistro" id="fechaRegistro">
+         </div>
+
+         <button type="submit" class="button">Añadir</button>
+
+    </div>
+
+    </form>
+</div>
+    <div class="tabla">
+        <table id="tablaDatos">
+
+        <tr><!--filas de la tabla-->
+          <th>ID Producto</th><!--encabezados de la tabla-->
+          <th>Descripcion</th>
+          <th>Valor Unitario</th>
+          <th>Estado</th>
+          <th>Fecha de registro</th>
+        </tr>
+
+        <tr><!--filas de la tabla-->
+          <td>producto 1</td><!--datos de la tabla-->
+          <td>bolso</td>
+          <td>5000</td>
+          <td>disponible</td>
+          <td>03/10/2021</td>
+        </tr>
+
+        <tr><!--filas de la tabla-->
+            <td>producto 2</td><!--datos de la tabla-->
+            <td>billetera</td>
+            <td>5000</td>
+            <td> no disponible</td>
+            <td>03/10/2021</td>
+          </tr>
+        
+      </table>
+</div>
+        
+<script type="text/javascript">
+const form = document.getElementById("formularioDatos")
+form.addEventListener("submit", function(event){
+       alert("Se agrego un nuevo producto")
+       event.preventDefault();
+    let capturarDatoFormulario = new FormData(form);
+    agregarDatoTabla(capturarDatoFormulario);
+
+    
+});
+function agregarDatoTabla(capturarDatoFormulario){
+    let transaccionTableData = document.getElementById("tablaDatos");
+    let nuevaFila = transaccionTableData.insertRow(-1);
+    
+    let nuevaCelda = nuevaFila.insertCell(0);
+    nuevaCelda.textContent = capturarDatoFormulario.get("idProducto");
+
+    nuevaCelda = nuevaFila.insertCell(1);
+    nuevaCelda.textContent = capturarDatoFormulario.get("descripcionProducto");
+
+    nuevaCelda = nuevaFila.insertCell(2);
+    nuevaCelda.textContent = capturarDatoFormulario.get("valorProducto");
+
+    nuevaCelda = nuevaFila.insertCell(3);
+    nuevaCelda.textContent = capturarDatoFormulario.get("estadoProducto");
+
+    nuevaCelda = nuevaFila.insertCell(4);
+    nuevaCelda.textContent = capturarDatoFormulario.get("fechaRegistro");
+};
+</script>
+
+
+
+    <footer>
+        <div class="footer">
+            <p>esto es un pie de pagina </p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
