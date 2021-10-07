@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<html>
+<head>
+    <title>Registro de Ventas</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <P>CDA-Developers</P>
+        <div class="dropdown">
+            <button class="dropbtn">Ventas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Ingresar ventas</a>
+                <a href="#">Buscar y actualizar ventas</a>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Productos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Registrar productos</a>
+                <a href="#">Buscar y actualizar productos</a>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Usuarios
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+        <div class ="wrapper">
+            <div class="barra_busqueda">
+                <ul>
+                    <li>ID venta</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        </div>
+        </div>
+        <div class ="wrapper2">
+            <div class="barra_busqueda2">
+                <ul>
+                    <li>C.C Cliente</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        </div>
+        <div class ="wrapper3">
+            <div class="barra_busqueda3">
+                <ul>
+                    <li>Nombre</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        </div>
+        <div class ="wrapper4">
+            <div class="barra_busqueda4">
+                <ul>
+                    <li>Vendedor</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        <form>
+            <label>
+                Fecha
+            </label>
+            <input type="date"/><br>
+        </form>
+        <div class ="wrapper5">
+            <div class="barra_busqueda4">
+                <ul>
+                    <li>Cantidad</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        </div>
+        <div class ="wrapper6">
+            <div class="barra_busqueda4">
+                <ul>
+                    <li>Valor Unitario</li>
+                </ul>
+            </div>
+        <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+        <div class="row">
+            <div class="col-25">
+             <label for="Lista-Productos">Productos</label>
+                </div>
+                <div class="col-75">
+                  <select id="Lista-Productos" name="Productos">
+                    <option value="Producto1">Producto1</option>
+                    <option value="Producto2">Producto2</option>
+                    <option value="Producto3">Producto3</option>
+                  </select>
+                </div>
+              </div>
+              <br></br>
+              <div className="table">
+    
+                <table>
+                    <tr>
+                        <th>ID Producto </th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Valor Unitario</th>
+                        <th>Valor total</th>
+                    </tr>
+                    <tr>
+                        <td>12345</td>
+                        <td contenteditable="true">Camisa</td>
+                        <td contenteditable="true">100</td>
+                        <td>£80</td>
+                        <td contenteditable="true">100*£80</td>
+
+                    </tr>
+                    <tr>
+                    <td>12345</td>
+                        <td contenteditable="true">Pantalón</td>
+                        <td contenteditable="true">20</td>
+                        <td> £100</td>
+                        <td contenteditable="true">20*£100</td>
+                    </tr>
+                    <tr>
+                    <td>12345</td>
+                        <td contenteditable="true">Pantalón</td>
+                        <td contenteditable="true">4000</td>
+                        <td>£113</td>
+                        <td contenteditable="true">4000*£113</td>
+
+                    </tr>
+                </table>
+        </div>
+        <div class="botonesAbajo">
+            <button type="submit" class="boton">
+                <span class="botonTexto">Actualizar</span>
+             </button>
+            <button onclick="guardarCambio()" type="submit" class="boton">
+                <span class="botonTexto">Guardar</span>
+            </button>
+            <button onclick="actualizarCambio" class="boton">
+                <span class="botonTexto">Eliminar</span>
+            </button>
+        </div>
+        <script src="Botones.js"></script>    
+        </div>
+</body>
+</html>
