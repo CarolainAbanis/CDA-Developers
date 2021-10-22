@@ -1,0 +1,28 @@
+@urlBase = http://localhost:5000
+GET {{urlBase}}/RegistroProductos/ HTTP/1.1
+###
+GET http://localhost:5000/RegistroProductos/000004d2e4e87dfcd0f5753d HTTP/1.1
+###P
+POST http://localhost:5000/RegistroProductos HTTP/1.1
+content-type: application/json
+
+{
+    "idproducto":899 , 
+    "descripcion": "maleta, agg node",
+    "valorunitario": 3000 , 
+    "estado": "disponible", 
+   "fecharegistro": "12-12-2021" 
+}
+###
+DELETE http://localhost:5000/RegistroProductos/616af05cbecc3fa6a8e49fb5 
+###
+PUT http://localhost:5000/RegistroProductos/616af05cbecc3fa6a8e49fb5 
+content-type: application/json
+
+{
+    "idproducto":12345 , 
+    "descripcion": "tarjero, agg node",
+    "valorunitario": 3000 , 
+    "estado": "disponible", 
+   "fecharegistro": "12-12-2021" 
+}
