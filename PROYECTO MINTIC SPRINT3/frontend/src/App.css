@@ -1,4 +1,7 @@
 /* Add a black background color to the top navigation */
+body{
+  background: none;
+}
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -256,3 +259,6 @@ tr:nth-child(even) {
      right:0px;	
      pointer-events: none;
  }
+
+ /* //INICIO SESION*/
+ 

@@ -1,11 +1,12 @@
-var axios = require('axios');
+const axios = require('axios');
 
 async function maestroProductosAction (){
+
 
 var config = {
   method: 'get',
   url: 'http://localhost:4000/ProductosAll',
-  headers: { 
+  headers: {
     'Content-Type': 'application/json',
     'accept': 'application/json'
   }
@@ -13,10 +14,12 @@ var config = {
 
 return axios(config)
 .then(response=> {
-  window.alert(response.data)
+  //window.alert(JSON.stringify(response.data));
+  return (response.data);
 })
 .catch(error => {
-  window.alert(error);
+  window.alert('error');
+  return (error)
 });
 
 }
