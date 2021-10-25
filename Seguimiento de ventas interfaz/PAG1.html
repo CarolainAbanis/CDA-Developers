@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+    <title>Pagina de ventas</title>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="PAG1.js"></script>
+    <link rel="stylesheet" href="PAG1.css" >
+    
+    </head>
+   
+     <body>
+       
+    
+      
+            
+       <div class="topnav" id="myTopnav">
+        <a href="#CDA-Developers" class="active">CDA-Developers</a>
+        <div class="dropdown">
+            <button class="dropbtn">Ventas
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Ingresar ventas</a>
+                <a href="#">Buscar y actualizar ventas</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Productos
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Registrar productos</a>
+                <a href="#">Buscar y actualizar productos</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Usuarios
+                <i class="fa fa-caret-down"></i>
+            </button>
+         </div>
+            
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+            <br></br>
+            <br></br>
+            
+
+            <div class="search-btn" id="search-btn">
+                <form class="buscar" action="action_page.php">
+                    <label class="labelBuscar" for="Buscar por">Buscar por: </label>
+                    <div class="caja">
+                        <select name="Buscar por" id="Buscar por">
+                            <option value="ID ventas">ID ventas</option>
+                            <option value="C.C. Cliente">C.C. Cliente</option>
+                            <option value="Nombre de cliente">Nombre de cliente</option>
+                            <option value="Todas las ventas">Todas las ventas</option>
+                        </select>
+                        <div id="element2">
+                            <input type="text" class="form-control" placeholder="" aria-label="Input group example" aria-describedby="basic-addon1" />
+                         </div>
+                         <div id="btn-buscar">
+                         <button className="btn-buscar" type="submit"> Buscar</button>
+                        </div>
+                        <div id="Actualizar-venta">
+                            <input type="button" onclick="Actualizarventa()" value="Actualizar venta"/>
+                            
+                        </div>
+                    </div>
+                  
+                  <br>
+                  <br>
+                  <br>
+                  <div>
+                  <table> 
+                  
+                  <tr>
+                      <th>Id Venta</th>
+                      <th>CC cliente</th>
+                      <th>Nombre</th>
+                      <th>vendedor</th>
+                      <th>productos</th>
+                      <th>cantidad</th>
+                      <th>Valor unitario</th>
+                      <th>valor total</th>
+                      <th>Fecha de venta</th>
+                      <th>estado de venta</th>
+                  </tr>
+                  <tr>
+                      <td>
+                          
+                      </td>
+                      
+                      <td>Usuario1</td>
+                      <td>Nombre</td>
+                      <td></td>
+                      <td>
+                          
+                      </td>
+                      <td><td>
+                      </td><td>
+                      </td><td>
+                      </td>
+                      <td><select class="estadoventa">
+                          <option value="En proceso">En proceso</option>
+                          <option value="Cancelada">Cancelada</option>
+                          <option value="Entregada">Entregada</option>
+                      </select>
+                      </td>
+                         
+                  </tr>
+                  <tr>
+                      <td>
+                          
+                      </td>
+                      <td>Usuario2</td>
+                      <td>Nombre</td>
+                      <td></td>
+                      <td>
+                          
+                      </td>
+                      <td><td>
+                      </td><td>
+                      </td><td>
+                      </td><td>
+                      </td>
+                         
+                  </tr>
+                  <tr>
+                      <td>
+                          
+                      </td>
+                      <td>Usuario3</td>
+                      <td>Nombre</td>
+                      <td></td>
+                      <td>
+                          
+                      </td>
+                      <td><td>
+                      </td><td>
+                      </td><td>
+                      </td><td>
+                      </td>
+                         
+                  </tr>
+                  <tr>
+          
+                      <td>
+                          
+                      </td>
+                      <td>Usuario4</td>
+                      <td>Nombre</td>
+                      <td></td>
+                      <td>
+                         
+                      <td>
+                          
+                      </td>
+                      <td>
+                      </td><td>
+                      </td><td>
+                      </td><td>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                         
+                      </td>
+                      <td>Usuario5</td>
+                      <td>Nombre</td>
+                      <td></td>
+                      <td>
+                          
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                       </td>     
+                       <td>
+                      </td><td>
+                      </td><td>
+                      </td>
+                  </tr>
+                  </table>    
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+</html>
