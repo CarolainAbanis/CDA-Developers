@@ -13,6 +13,8 @@ export class ListaProductos extends React.Component {
                 <td>{pdt.valorunitario}</td>
                 <td>{pdt.estado}</td>
                 <td>{pdt.fecharegistro}</td>
+                <td><button type="button" onClick={()=> this.props.onEditProductos(pdt)}>Editar </button></td>
+                <td><button type="button"onClick={()=> this.props.onDeleteProductos(pdt.idproducto)}>Eliminar </button></td>
             </tr>);
         });
         console.log('productosRows = ',productosRows);

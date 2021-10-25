@@ -7,16 +7,18 @@ POST http://localhost:5000/RegistroProductos HTTP/1.1
 content-type: application/json
 
 {
-    "idproducto":899 , 
-    "descripcion": "maleta, agg node",
+    "idproducto":12345 , 
+    "descripcion": "tarjero, agg node",
     "valorunitario": 3000 , 
     "estado": "disponible", 
    "fecharegistro": "12-12-2021" 
 }
+
+
 ###
-DELETE http://localhost:5000/RegistroProductos/616af05cbecc3fa6a8e49fb5 
+DELETE http://localhost:5000/RegistroProductos/617249c535c38b944e06c500 
 ###
-PUT http://localhost:5000/RegistroProductos/616af05cbecc3fa6a8e49fb5 
+PUT http://localhost:5000/registroproductos/616b5ce5e1c6cfe62809612c 
 content-type: application/json
 
 {

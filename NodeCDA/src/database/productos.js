@@ -5,7 +5,7 @@ const schemaProductos = new mongoose.Schema({
     descripcion: {type: String, required: true},
     valorunitario: {type: Number, required: true}, 
     estado: {type: String, required: true}, 
-    fecharegistro: {type: Date, required: true}
+    fecharegistro: {type: String, required: true}
 });
 const ProductosModel = mongoose.model('RegistroProductos', schemaProductos);
 
