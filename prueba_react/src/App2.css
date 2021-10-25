@@ -169,7 +169,8 @@ tr:nth-child(even) {
     border: none;
     width: 50%;
     color: white;
-    font-size: 25px;
+    font-size: 13px;
+    size: 100px;
     background: #333;
     padding: center;
     border-radius: 5px;

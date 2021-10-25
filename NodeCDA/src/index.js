@@ -1,10 +1,27 @@
 const express = require('express');
-const mongoose = require('./database/conexion');
-const ProductosModel = require('./database/productos');
-
+const cors = require('cors');
 const app = express();
+app.use(cors());
+app.use(express.json());
 
-//tipo de consultas que le puedo hacer al servidor
+const mongoose = require('./database/conexion');
+const ProductosModel = require('./database/productos'); 
+const UsuariosModel = require('./database/usuarios');
+//const productosControllers = require('./controllers/productosControllers');
+
+
+
+//app.route('/RegistroProductos').post(crearProductos);
+
+app.post('/RegistroProductos', (req, res) => {
+    console.log(req.params, req.body, req.headers);
+    ProductosModel.create(req.body).then((data) => {
+        res.json(data);
+    }).catch(err => {
+        res.status(500).send(err);
+    });
+
+});
 //listar elementos de la BD
 app.get('/RegistroProductos', (req, res) => {
     console.log(req.params);
@@ -15,29 +32,8 @@ app.get('/RegistroProductos', (req, res) => {
     });
    
 });
-
-//añadir elementos a la BD
-app.post( '/RegistroProductos',(req, res) => {
-    console.log(req.params, req.body, req.headers);
-    ProductosModel.create(
-        {
-            idproducto: "5555",
-            descripcion: "maleta, agg node",
-            valorunitario: 20000,
-            estado: "disponible",
-            fecharegistro: "10-16-2021"
-
-        }
-    ).then((data) => {
-        res.json(data);
-    }).catch(err => {
-        res.send(err);
-    });
-
-});
-
 //actualizar  elementos de la BD
-app.put('/RegistroProductos', (req, res) => {
+app.put('/RegistroProductos/:id', (req, res) => {
     console.log(req.params, req.body, req.headers);
     ProductosModel.findByIdAndUpdate(req.params.id, req.body).then((data)=>{
         res.json(data);
@@ -55,6 +51,25 @@ app.delete('/RegistroProductos/:id', (req, res) => {
         res.send(err);
     });
 });
+
+app.post('/RegistroUsuarios', (req, res) => {
+    console.log(req.params, req.body, req.headers);
+    UsuariosModel.create(
+        {
+            cedula: 122222, 
+            nombre: "victor quintero",
+            correo: "victor@gmail.com", 
+            contraseña: "aaaaa"
+
+        }
+    ).then((data) => {
+        res.json(data);
+    }).catch(err => {
+        res.send(err);
+    });
+
+});
+
 
 app.listen(5000, () => {
     console.log('ya esta corrriendo el servidor');
