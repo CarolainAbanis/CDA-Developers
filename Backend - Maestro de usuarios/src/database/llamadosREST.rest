@@ -1,0 +1,37 @@
+@urlBase = 'mongodb+srv://AdminCDA:pws1234@cluster0.w8nvs.mongodb.net/Sprint3?retryWrites=true&w=majority'
+
+GET {{urlBase}}/Sprint3/users/ HTTP/1.1
+
+###
+
+GET http://localhost:3001/users/615d29d332e23f3142294a08 HTTP/1.1
+
+###
+
+POST http://localhost:3001/users/ HTTP/1.1
+content-type: application/json
+{"userId": "101001",
+"firstName": "Jota",
+"lastName": "Pelaez",
+"password": 123456,
+"email": "jota.perez@gmail.com",
+"userRole": "administrador",
+"userStaus": "activo"
+}
+###
+
+DELETE {{urlBase}}/users/615d29d332e23f3142294a08
+
+###
+
+PUT http://localhost:3001/users/
+content-type: application/json
+
+{"userId": 202002,
+"firstName": "Ka",
+"lastName": "Alvarez",
+"password": 12345678,
+"email": "ka.alvarez@gmail.com",
+"userRole": "administrador",
+"userStaus": "activo"
+}

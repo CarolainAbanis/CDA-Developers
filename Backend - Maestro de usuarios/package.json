@@ -1,0 +1,22 @@
+{
+  "name": "02-backend---maestro-usuarios",
+  "version": "1.0.0",
+  "main": "Backend_maestro_usuarios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Diego Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.14.5",
+    "nodemon": "^2.0.14"
+  },
+  "description": "Backend y conexion a base de datos para la interfaz de maestro de usuarios"
+}
