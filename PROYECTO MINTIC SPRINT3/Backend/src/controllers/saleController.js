@@ -2,6 +2,7 @@ const express = require('express');
 const venta = require('../models/saleModel')
 
 //Controladores
+
 crearVenta = async (req, res) =>{
     venta.create(req.body)
         .then(() => res.json({'Mensaje':'La venta ha sido registrada'}))

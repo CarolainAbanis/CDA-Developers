@@ -20,10 +20,8 @@ encontrarProductoDescrip = async (req, res) => {
     }
     
 listarProductoAll = async (req, res) => {
-    
     producto.find()
-        .then((data) => {res.json(data),
-            console.log(data)})
+        .then((data) => res.json(data))
         .catch(err => res.json({'Mensaje':'El producto no fue encontrado'}))
     }
 

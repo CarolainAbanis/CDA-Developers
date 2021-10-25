@@ -1,19 +1,22 @@
 import react from 'react';
 import Menu from './Components/Menu';
-import Tabla from './Components/Tabla';
-import Combobox from './Components/Combobox';
-//import {Menu} from './Components/Menu'
-// import Table from '/Components/Table';
+
+import InicioSesion from './Components/InicioSesion';
 import './App.css';
+
+import { Router, Switch, Route } from 'react-router-dom';
+import MaestroProducto from './Components/MaestroProductos';
+import { createBrowserHistory } from 'history';
 
 
 function App(){
     return (
-        <>
-        <Menu />
-        <Combobox/>
-        <Tabla />      
-        </>
+<Router history={createBrowserHistory()}>
+      <Switch>
+        <Route path="/inicioSesion" component={InicioSesion} />
+        <Route path="/productos" component={MaestroProducto} />
+      </Switch>
+    </Router>
           
     )
 }
